@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>הצהרת מלווה – הלוואה ללא ריבית</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b2a;
+    --muted:#5b6b68;
+    --line:#d6dbd8;
+    --green:#1f6f5f;
+    --green-dark:#175447;
+    --mint:#e8f3ef;
+    --paper:#ffffff;
+    --bg:#f2f4f3;
+    --err:#b3261e;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--bg)}
+  body{
+    margin:0;color:var(--ink);background:var(--bg);
+    font-family:"Heebo","Arial Hebrew",Arial,Roboto,"Noto Sans Hebrew",sans-serif;
+    font-size:17px;line-height:1.55;
+    -webkit-text-size-adjust:100%;
+  }
+  .page{max-width:680px;margin:0 auto;padding:28px 18px 70px}
+  h1{font-size:28px;line-height:1.2;margin:0 0 6px;font-weight:700}
+  .lead{margin:0 0 26px;color:var(--muted);font-size:16px}
+  .intro{
+    background:var(--paper);border-right:4px solid var(--green);
+    padding:14px 16px;margin:0 0 30px;
+  }
+  .intro p{margin:0 0 8px}
+  .intro p:last-child{margin:0}
+  section{margin:0 0 30px}
+  h2{font-size:19px;margin:0 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line);font-weight:700}
+  label{display:block;font-weight:700;margin:12px 0 5px;font-size:15px}
+  .hint{color:var(--muted);font-weight:400;font-size:14px}
+  input[type=text],input[type=tel],input[type=number],input[type=date],select{
+    width:100%;font:inherit;color:var(--ink);padding:11px 12px;
+    border:1px solid var(--line);border-radius:6px;background:var(--paper);
+    min-height:46px;
+  }
+  input:focus,select:focus,button:focus,canvas:focus,a:focus{outline:2px solid var(--green);outline-offset:2px}
+  input.err,select.err{border-color:var(--err);background:#fff6f5}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:520px){.row{grid-template-columns:1fr}}
+  .facts{background:var(--mint);padding:12px 14px;border-radius:6px;margin-top:16px;font-size:15.5px}
+  .facts b{color:var(--green-dark)}
+  .opt{display:flex;align-items:flex-start;gap:10px;font-weight:400;margin:10px 0;font-size:16px;cursor:pointer}
+  .opt input[type=radio],.opt input[type=checkbox]{margin:4px 0 0;width:20px;height:20px;flex:none;accent-color:var(--green)}
+  .opt input[type=date]{width:auto;min-height:40px;padding:6px 10px;margin-right:4px}
+  #sig{
+    display:block;width:100%;height:210px;background:var(--paper);
+    border:2px dashed var(--green);border-radius:8px;touch-action:none;
+    -webkit-user-select:none;user-select:none;cursor:crosshair;
+  }
+  .sigwrap{position:relative}
+  .sigwrap .ghost{
+    position:absolute;right:14px;top:10px;color:#9aa8a4;font-size:14px;pointer-events:none;
+  }
+  .btn{
+    font:inherit;font-weight:700;font-size:17px;padding:13px 22px;border-radius:8px;
+    border:1.5px solid var(--green);background:var(--green);color:#fff;cursor:pointer;
+    text-decoration:none;display:inline-block;line-height:1.2;
+  }
+  .btn:hover{background:var(--green-dark);border-color:var(--green-dark)}
+  .btn.sec{background:var(--paper);color:var(--green-dark)}
+  .btn.sec:hover{background:var(--mint)}
+  .btn[disabled]{opacity:.6;cursor:default}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .msg{color:var(--err);font-weight:700;margin-top:10px;min-height:1.5em}
+  #preview{display:none;border-top:3px solid var(--green);padding-top:18px}
+  #preview img{width:100%;border:1px solid var(--line);display:block;background:#fff}
+  .done{background:var(--mint);color:var(--green-dark);font-weight:700;font-size:18px;padding:14px 16px;border-radius:6px;margin:14px 0 0}
+  .foot{color:var(--muted);font-size:15px;margin-top:40px}
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>הצהרת מלווה – הלוואה ללא ריבית</h1>
+<p class="lead">לבקשת בנק ONE ZERO. הלווה: נועם דורון.</p>
+
+<div class="intro">
+  <p>היי, ותודה על העזרה 🙏</p>
+  <p>הבנק ביקש ממני אישור קצר מכמה חברים שהכסף שהעברתם הוא הלוואה. ממלאים, חותמים באצבע, לוחצים ״צור מסמך חתום״ ואז ״שלח לנועם במייל״. שתי דקות.</p>
+</div>
+
+<form id="f" novalidate autocomplete="on">
+
+<section>
+  <h2>הפרטים שלך (המלווה)</h2>
+  <div class="row">
+    <div><label for="fname">שם מלא</label><input id="fname" type="text" autocomplete="name" required></div>
+    <div><label for="fid">מספר תעודת זהות <span class="hint">(9 ספרות)</span></label><input id="fid" type="text" inputmode="numeric" maxlength="9" autocomplete="off" required></div>
+  </div>
+  <div class="row">
+    <div><label for="fphone">טלפון</label><input id="fphone" type="tel" autocomplete="tel" required></div>
+    <div><label for="fcity">יישוב <span class="hint">(לא חובה)</span></label><input id="fcity" type="text" autocomplete="address-level2"></div>
+  </div>
+  <label for="fmail">המייל שלך <span class="hint">(לא חובה – תקבלו עותק של ההצהרה החתומה)</span></label>
+  <input id="fmail" type="email" autocomplete="email" inputmode="email" dir="ltr" style="text-align:left">
+</section>
+
+<section>
+  <h2>ההלוואה</h2>
+  <div class="row">
+    <div><label for="famount">סכום ההלוואה (₪)</label><input id="famount" type="number" inputmode="decimal" min="1" step="any" required></div>
+    <div><label for="fdate">תאריך ההעברה <span class="hint">(אם היו כמה – הראשונה)</span></label><input id="fdate" type="date" required></div>
+  </div>
+  <div class="row">
+    <div><label for="fmethod">איך הועבר</label>
+      <select id="fmethod">
+        <option value="bank">העברה בנקאית</option>
+        <option value="bit">ביט (Bit)</option>
+        <option value="paybox">פייבוקס (PayBox)</option>
+        <option value="cash">מזומן</option>
+        <option value="other">אחר</option>
+      </select>
+    </div>
+    <div><label for="fto">לאיזה חשבון של נועם</label>
+      <select id="fto">
+        <option value="onezero">ONE ZERO (בנק 18, סניף 001, חשבון 231566835)</option>
+        <option value="leumi">חשבון אחר של נועם (בנק לאומי)</option>
+      </select>
+    </div>
+  </div>
+  <label for="fbank">מאיזה בנק / סניף שלך יצא הכסף <span class="hint">(לא חובה, עוזר לבנק לאתר את ההעברה)</span></label>
+  <input id="fbank" type="text" placeholder="לדוגמה: בנק הפועלים, סניף 123">
+
+  <div class="facts">
+    <b>תנאים:</b> ההלוואה ניתנה ללא ריבית, ללא הצמדה וללא כל תנאי נוסף. נועם מתחייב להחזיר את מלוא הסכום.
+  </div>
+
+  <label>מועד ההחזר</label>
+  <label class="opt"><input type="radio" name="repay" value="none" checked> ללא מועד קבוע – יוחזר במועד שנסכם בינינו</label>
+  <label class="opt"><input type="radio" name="repay" value="date"> <span>עד תאריך: <input id="frepay" type="date"></span></label>
+</section>
+
+<section>
+  <h2>הצהרה</h2>
+  <label class="opt"><input type="checkbox" id="c1"> הכסף שהעברתי הוא מכספי שלי, ממקור חוקי, ולא מטעם אדם אחר או עבורו.</label>
+  <label class="opt"><input type="checkbox" id="c2"> הפרטים שמילאתי נכונים.</label>
+</section>
+
+<section>
+  <h2>חתימה</h2>
+  <p class="hint" style="margin:0 0 8px">חותמים בתוך המסגרת עם האצבע (או העכבר).</p>
+  <div class="sigwrap">
+    <canvas id="sig" tabindex="0" aria-label="אזור חתימה"></canvas>
+    <span class="ghost" id="ghost">חתימה כאן</span>
+  </div>
+  <div class="btns">
+    <button type="button" class="btn sec" id="clear">נקה חתימה</button>
+    <span><label for="sigdate" style="display:inline;margin:0 0 0 6px">תאריך החתימה:</label><input id="sigdate" type="date" style="width:auto;min-height:40px;padding:6px 10px"></span>
+  </div>
+</section>
+
+<section class="facts" style="margin-top:0">
+  <b>פרטי הלווה:</b> נועם דורון, ת.ז. 304979909, טלפון 050-7746289<br>
+  <b>חשבון:</b> נועם דורון, ONE ZERO, בנק 18, סניף 001, חשבון 231566835
+</section>
+
+<div class="btns">
+  <button type="button" class="btn" id="make">צור מסמך חתום</button>
+</div>
+<div class="msg" id="msg" role="alert"></div>
+</form>
+
+<section id="preview">
+  <h2>המסמך מוכן</h2>
+  <img id="pimg" alt="תצוגה מקדימה של ההצהרה החתומה">
+  <div id="sendbox">
+    <div class="btns"><button type="button" class="btn" id="send">שלח לנועם במייל</button></div>
+    <p class="hint">המסמך נשלח ישירות לנועם. אם מילאתם מייל למעלה – גם אתם תקבלו עותק.</p>
+  </div>
+  <div id="donebox" style="display:none">
+    <p class="done">נשלח לנועם. תודה רבה! 🙏</p>
+    <div class="btns"><button type="button" class="btn sec" id="dl2">שמור עותק (PDF)</button></div>
+  </div>
+  <div id="fallback" style="display:none">
+    <div class="btns">
+      <button type="button" class="btn" id="share">שתף (וואטסאפ)</button>
+      <button type="button" class="btn sec" id="dl">הורד PDF</button>
+      <a class="btn sec" id="wa" href="https://wa.me/972507746289" target="_blank" rel="noopener">וואטסאפ לנועם</a>
+    </div>
+    <p class="hint">״שתף״ פותח את חלון השיתוף של הטלפון – בוחרים וואטסאפ. אם זה לא עובד: ״הורד PDF״ ואז לשלוח ידנית.</p>
+  </div>
+  <div class="msg" id="msg2" role="alert"></div>
+</section>
+
+<p class="foot">שאלות? נועם – 050-7746289</p>
+</div>
+
+<div id="hidden" dir="rtl" aria-hidden="true" style="position:absolute;right:-99999px;top:0;width:1px;height:1px;overflow:hidden"></div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+
+/* ===== הגדרות שליחה במייל =====
+   SEND_URL: כתובת ה-Web app של Google Apps Script (Code.gs). ריק = בלי מייל, רק שיתוף/הורדה.
+   SEND_TOKEN: חייב להיות זהה ל-TOKEN בקובץ Code.gs. */
+var SEND_URL='https://script.google.com/macros/s/AKfycby-NPOoYN8XgDs0t5vhiite2CjGb_Pv4zMzid24e-xkkh4XZ5fKGANR8Bn0iOFqXVQs9A/exec';
+var SEND_TOKEN='noam-halvaa-2026';
+
+/* ================= RENDER-START (pure: no DOM access) ================= */
+var DOC_FONT='"Heebo","Arial Hebrew",Arial,Roboto,"Noto Sans Hebrew",sans-serif';
+function fmtDate(iso){ if(!iso) return ''; var p=iso.split('-'); return p[2]+'.'+p[1]+'.'+p[0]; }
+function fmtAmt(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+/* d: data object, sigImg: trimmed signature canvas (or null), createCanvas(w,h) -> canvas */
+function renderDoc(d, sigImg, createCanvas, stamp){
+  var W=1240,H=1754,M=100,R=W-M,MAXW=W-2*M,LH=46;
+  var c=createCanvas(W,H), x=c.getContext('2d');
+  try{ x.direction='rtl'; }catch(e){}
+  x.fillStyle='#ffffff'; x.fillRect(0,0,W,H);
+  x.textBaseline='alphabetic';
+  var rtl=function(s){ return '\u202B'+s+'\u202C'; };
+  var ltr=function(s){ return '\u202A'+s+'\u202C'; };
+  var NB='\u00A0';
+  var font=function(px,w){ x.font=(w||'normal')+' '+px+'px '+DOC_FONT; };
+  var y=M;
+  var para=function(s,px,color,weight){
+    font(px,weight); x.fillStyle=color||'#1c2b2a'; x.textAlign='right';
+    var words=s.split(' '), cur='';
+    for(var i=0;i<words.length;i++){
+      var t=cur?cur+' '+words[i]:words[i];
+      if(cur && x.measureText(t).width>MAXW){ x.fillText(rtl(cur),R,y); y+=LH; cur=words[i]; }
+      else cur=t;
+    }
+    if(cur){ x.fillText(rtl(cur),R,y); y+=LH; }
+  };
+  var rule=function(yy,color){ x.strokeStyle=color||'#d6dbd8'; x.lineWidth=2; x.beginPath(); x.moveTo(M,yy); x.lineTo(R,yy); x.stroke(); };
+  var head=function(s){ y+=22; font(30,'bold'); x.fillStyle='#1f6f5f'; x.textAlign='right'; x.fillText(rtl(s),R,y); y+=14; rule(y); y+=48; };
+  var kv=function(k,v){
+    font(30,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right'; x.fillText(rtl(k),R,y);
+    var wk=x.measureText(k).width;
+    font(30,'normal'); x.fillText(rtl(v),R-wk-14,y); y+=LH;
+  };
+
+  /* title */
+  y+=48;
+  font(46,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right';
+  x.fillText(rtl('הצהרת מלווה – הלוואה ללא ריבית'),R,y); y+=46;
+  font(26,'normal'); x.fillStyle='#5b6b68';
+  x.fillText(rtl('לבקשת בנק ONE ZERO. הלווה: נועם דורון, ת.ז. 304979909'),R,y); y+=28;
+  rule(y,'#1f6f5f');
+
+  /* lender */
+  head('פרטי המלווה');
+  kv('שם מלא:',d.name);
+  kv('תעודת זהות:',d.id);
+  kv('טלפון:',ltr(d.phone));
+  if(d.city) kv('יישוב:',d.city);
+
+  /* loan */
+  head('ההלוואה');
+  var amt=fmtAmt(d.amount)+NB+'₪';
+  para('אני מצהיר/ה כי הלוויתי לנועם דורון, ת.ז.'+NB+'304979909 (להלן: הלווה), סך של '+amt+'.',30);
+  var how;
+  if(d.method==='cash'){
+    how='הכסף נמסר ללווה במזומן ביום'+NB+fmtDate(d.date)+'.';
+  }else{
+    var via=(d.method==='other')?'':' באמצעות '+d.methodText;
+    var from=d.bank?' מחשבוני ('+d.bank+')':'';
+    var to=(d.to==='onezero')
+      ? 'לחשבון הלווה בבנק ONE'+NB+'ZERO (בנק'+NB+'18, סניף'+NB+'001, חשבון'+NB+'231566835)'
+      : 'לחשבונו של הלווה בבנק לאומי';
+    how='הכסף הועבר ביום'+NB+fmtDate(d.date)+via+from+' '+to+'.';
+  }
+  para(how,30);
+  para('תנאי ההלוואה: ללא ריבית, ללא הצמדה וללא כל תנאי נוסף.',30);
+  para(d.repay==='date'
+    ? 'מועד ההחזר: הלווה יחזיר את מלוא הסכום עד ליום'+NB+fmtDate(d.repayDate)+'.'
+    : 'מועד ההחזר: לא נקבע מועד קבוע. הלווה יחזיר את מלוא הסכום במועד שיוסכם בין הצדדים.',30);
+
+  /* declaration */
+  head('הצהרה');
+  para('• הכסף שהעברתי הוא מכספי שלי, ממקור חוקי, ולא מטעם אדם אחר או עבורו.',30);
+  para('• הפרטים במסמך זה נכונים ומדויקים.',30);
+
+  /* signature */
+  head('חתימת המלווה');
+  var bw=520,bh=190,bx=R-bw,by=y-16;
+  x.strokeStyle='#9aa8a4'; x.lineWidth=2; x.strokeRect(bx,by,bw,bh);
+  if(sigImg){
+    var sw=sigImg.width, sh=sigImg.height;
+    var sc=Math.min((bw-24)/sw,(bh-24)/sh);
+    var dw=sw*sc, dh=sh*sc;
+    x.drawImage(sigImg, bx+(bw-dw)/2, by+(bh-dh)/2, dw, dh);
+  }
+  var ty=by+bh/2+10;
+  font(30,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right';
+  x.fillText(rtl('תאריך:'),bx-50,ty);
+  var wk=x.measureText('תאריך:').width;
+  font(30,'normal'); x.fillText(rtl(fmtDate(d.sigDate)),bx-50-wk-14,ty);
+  y=by+bh+40;
+  font(26,'normal'); x.fillStyle='#5b6b68'; x.textAlign='right';
+  x.fillText(rtl(d.name+', ת.ז. '+d.id),R,y);
+
+  /* footer */
+  var fy=H-M-70;
+  rule(fy);
+  fy+=44;
+  font(24,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right'; x.fillText(rtl('פרטי הלווה:'),R,fy);
+  var wf=x.measureText('פרטי הלווה:').width;
+  font(24,'normal'); x.fillText(rtl('נועם דורון, ת.ז. 304979909, טלפון 050-7746289'),R-wf-12,fy);
+  fy+=36;
+  font(24,'bold'); x.fillText(rtl('חשבון:'),R,fy);
+  wf=x.measureText('חשבון:').width;
+  font(24,'normal'); x.fillText(rtl('נועם דורון, ONE ZERO, בנק 18, סניף 001, חשבון 231566835'),R-wf-12,fy);
+  fy+=34;
+  font(20,'normal'); x.fillStyle='#8a9895';
+  x.fillText(rtl('המסמך מולא ונחתם דיגיטלית. '+(stamp||'')),R,fy);
+  return c;
+}
+/* minimal PDF: one A4 page holding one JPEG */
+function makePdf(jpeg, w, h, BlobCtor){
+  var enc=new TextEncoder(), parts=[], len=0, offs=[];
+  var push=function(s){ var b=(typeof s==='string')?enc.encode(s):s; parts.push(b); len+=b.length; };
+  var obj=function(n,body){ offs[n]=len; push(n+' 0 obj\n'+body+'\nendobj\n'); };
+  push('%PDF-1.4\n');
+  obj(1,'<< /Type /Catalog /Pages 2 0 R >>');
+  obj(2,'<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
+  obj(3,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');
+  offs[4]=len;
+  push('4 0 obj\n<< /Type /XObject /Subtype /Image /Width '+w+' /Height '+h+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+jpeg.length+' >>\nstream\n');
+  push(jpeg);
+  push('\nendstream\nendobj\n');
+  var content='q 595.28 0 0 841.89 0 0 cm /Im0 Do Q';
+  obj(5,'<< /Length '+content.length+' >>\nstream\n'+content+'\nendstream');
+  var xref=len, t='xref\n0 6\n0000000000 65535 f \n';
+  for(var i=1;i<=5;i++){ t+=('0000000000'+offs[i]).slice(-10)+' 00000 n \n'; }
+  push(t+'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF\n');
+  return new BlobCtor(parts,{type:'application/pdf'});
+}
+/* ================= RENDER-END ================= */
+
+/* ---------- dates ---------- */
+function todayISO(){ var d=new Date(), p=function(n){return (n<10?'0':'')+n;}; return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate()); }
+$('sigdate').value=todayISO();
+$('fdate').max=todayISO();
+
+/* ---------- signature pad ---------- */
+var sig=$('sig'), sctx=sig.getContext('2d'), drawing=false, hasSig=false, last=null, lastW=0;
+function setupSig(){
+  var r=sig.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
+  var keep=hasSig?sig.toDataURL():null;
+  sig.width=Math.round(r.width*dpr); sig.height=Math.round(r.height*dpr);
+  sctx.setTransform(dpr,0,0,dpr,0,0);
+  sctx.lineWidth=2.6; sctx.lineCap='round'; sctx.lineJoin='round'; sctx.strokeStyle='#1c2b2a';
+  if(keep){ var im=new Image(); im.onload=function(){ sctx.drawImage(im,0,0,r.width,r.height); }; im.src=keep; }
+  lastW=r.width;
+}
+setupSig();
+window.addEventListener('resize',function(){ var w=sig.getBoundingClientRect().width; if(Math.abs(w-lastW)>2) setupSig(); });
+function pos(e){ var r=sig.getBoundingClientRect(); return {x:e.clientX-r.left,y:e.clientY-r.top}; }
+sig.addEventListener('pointerdown',function(e){
+  e.preventDefault(); drawing=true;
+  try{ sig.setPointerCapture(e.pointerId); }catch(err){}
+  last=pos(e);
+  sctx.beginPath(); sctx.moveTo(last.x,last.y); sctx.lineTo(last.x+0.01,last.y); sctx.stroke();
+  hasSig=true; $('ghost').style.display='none'; invalidate();
+});
+sig.addEventListener('pointermove',function(e){
+  if(!drawing) return;
+  var p=pos(e);
+  sctx.beginPath(); sctx.moveTo(last.x,last.y); sctx.lineTo(p.x,p.y); sctx.stroke();
+  last=p;
+});
+function stop(){ drawing=false; }
+sig.addEventListener('pointerup',stop);
+sig.addEventListener('pointercancel',stop);
+$('clear').addEventListener('click',function(){
+  sctx.save(); sctx.setTransform(1,0,0,1,0,0); sctx.clearRect(0,0,sig.width,sig.height); sctx.restore();
+  hasSig=false; $('ghost').style.display=''; invalidate();
+});
+/* crop the signature to its ink bounding box */
+function trimSig(){
+  var w=sig.width,h=sig.height, im=sctx.getImageData(0,0,w,h).data;
+  var minX=w,minY=h,maxX=-1,maxY=-1;
+  for(var yy=0;yy<h;yy++){ for(var xx=0;xx<w;xx++){ if(im[(yy*w+xx)*4+3]>10){ if(xx<minX)minX=xx; if(xx>maxX)maxX=xx; if(yy<minY)minY=yy; if(yy>maxY)maxY=yy; } } }
+  if(maxX<0) return null;
+  var pad=Math.round(8*(window.devicePixelRatio||1));
+  minX=Math.max(0,minX-pad); minY=Math.max(0,minY-pad); maxX=Math.min(w-1,maxX+pad); maxY=Math.min(h-1,maxY+pad);
+  var cw=maxX-minX+1, ch=maxY-minY+1;
+  var t=document.createElement('canvas'); t.width=cw; t.height=ch;
+  t.getContext('2d').drawImage(sig,minX,minY,cw,ch,0,0,cw,ch);
+  return t;
+}
+
+/* ---------- validation ---------- */
+function validId(v){
+  var s=v.replace(/\D/g,''); if(s.length<5||s.length>9) return false;
+  s=('000000000'+s).slice(-9); var sum=0;
+  for(var i=0;i<9;i++){ var n=(+s[i])*((i%2)+1); if(n>9) n-=9; sum+=n; }
+  return sum%10===0;
+}
+function collect(){
+  var errs=[];
+  var mark=function(el,bad){ el.classList.toggle('err',!!bad); };
+  var name=$('fname').value.trim(); mark($('fname'),!name); if(!name) errs.push('שם מלא');
+  var id=$('fid').value.trim(); var idOk=validId(id); mark($('fid'),!idOk); if(!idOk) errs.push('תעודת זהות (בדקו את הספרות)');
+  var phone=$('fphone').value.trim(); var phOk=phone.replace(/\D/g,'').length>=9 && /^[+\d(][\d\s\-()]{7,18}$/.test(phone); mark($('fphone'),!phOk); if(!phOk) errs.push('טלפון');
+  var amount=parseFloat($('famount').value); var amOk=amount>0; mark($('famount'),!amOk); if(!amOk) errs.push('סכום');
+  var date=$('fdate').value; mark($('fdate'),!date); if(!date) errs.push('תאריך ההעברה');
+  var repay=document.querySelector('input[name=repay]:checked').value;
+  var repayDate=$('frepay').value;
+  if(repay==='date'){ mark($('frepay'),!repayDate); if(!repayDate) errs.push('תאריך ההחזר'); } else mark($('frepay'),false);
+  if(!$('c1').checked||!$('c2').checked) errs.push('סימון שתי ההצהרות');
+  if(!hasSig) errs.push('חתימה');
+  var sigDate=$('sigdate').value; mark($('sigdate'),!sigDate); if(!sigDate) errs.push('תאריך החתימה');
+  var email=$('fmail').value.trim(); var emOk=!email||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email); mark($('fmail'),!emOk); if(!emOk) errs.push('מייל (לא תקין)');
+  var m=$('fmethod');
+  return {errs:errs, data:{
+    name:name, id:('000000000'+id.replace(/\D/g,'')).slice(-9), phone:phone, city:$('fcity').value.trim(),
+    amount:amount, date:date, method:m.value, methodText:m.options[m.selectedIndex].textContent.trim(),
+    to:$('fto').value, bank:$('fbank').value.trim(), repay:repay, repayDate:repayDate, sigDate:sigDate, email:email
+  }};
+}
+
+/* ---------- build / send ---------- */
+var pdfBlob=null, pdfName='', lastData=null, lastStamp='';
+function invalidate(){ pdfBlob=null; lastData=null; $('preview').style.display='none'; $('msg2').textContent=''; }
+$('f').addEventListener('input',invalidate);
+$('f').addEventListener('change',invalidate);
+$('frepay').addEventListener('change',function(){ if(this.value) document.querySelector('input[name=repay][value=date]').checked=true; });
+function createCanvas(w,h){
+  var hd=$('hidden'); hd.innerHTML='';
+  var c=document.createElement('canvas'); c.width=w; c.height=h;
+  c.setAttribute('dir','rtl'); c.style.direction='rtl'; hd.appendChild(c); return c;
+}
+function stampNow(){ var d=new Date(), p=function(n){return (n<10?'0':'')+n;}; return p(d.getDate())+'.'+p(d.getMonth()+1)+'.'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes()); }
+function showPreview(){
+  var canSend=!!SEND_URL;
+  $('sendbox').style.display=canSend?'block':'none';
+  $('fallback').style.display=canSend?'none':'block';
+  $('donebox').style.display='none';
+  var b=$('send'); b.disabled=false; b.textContent='שלח לנועם במייל';
+  $('preview').style.display='block';
+  $('preview').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+$('make').addEventListener('click',function(){
+  var r=collect();
+  if(r.errs.length){ $('msg').textContent='חסר או לא תקין: '+r.errs.join(', ')+'.'; return; }
+  $('msg').textContent='';
+  var btn=$('make'); btn.disabled=true;
+  var fontsReady=Promise.resolve();
+  if(document.fonts&&document.fonts.load){
+    fontsReady=Promise.all([document.fonts.load('bold 46px Heebo'),document.fonts.load('30px Heebo')]).catch(function(){});
+  }
+  fontsReady.then(function(){
+    lastStamp=stampNow();
+    var canvas=renderDoc(r.data, trimSig(), createCanvas, lastStamp);
+    return new Promise(function(res){ canvas.toBlob(function(b){ res({canvas:canvas,blob:b}); },'image/jpeg',0.9); });
+  }).then(function(o){
+    return o.blob.arrayBuffer().then(function(ab){
+      pdfBlob=makePdf(new Uint8Array(ab), o.canvas.width, o.canvas.height, Blob);
+      pdfName='הצהרת_הלוואה_'+r.data.name.replace(/\s+/g,'_')+'.pdf';
+      lastData=r.data;
+      $('pimg').src=o.canvas.toDataURL('image/jpeg',0.8);
+      showPreview();
+    });
+  }).catch(function(e){
+    $('msg').textContent='משהו השתבש ביצירת המסמך. נסו שוב או שלחו צילום מסך של הטופס לנועם.';
+  }).then(function(){ btn.disabled=false; });
+});
+
+function download(){
+  if(!pdfBlob) return;
+  var u=URL.createObjectURL(pdfBlob), a=document.createElement('a');
+  a.href=u; a.download=pdfName; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(u); a.remove(); },3000);
+}
+$('dl').addEventListener('click',download);
+$('dl2').addEventListener('click',download);
+
+function blobToBase64(b){
+  return new Promise(function(res,rej){
+    var fr=new FileReader();
+    fr.onload=function(){ res(String(fr.result).split(',')[1]); };
+    fr.onerror=function(){ rej(new Error('read failed')); };
+    fr.readAsDataURL(b);
+  });
+}
+$('send').addEventListener('click',function(){
+  if(!pdfBlob||!lastData||!SEND_URL) return;
+  var d=lastData, btn=$('send');
+  btn.disabled=true; btn.textContent='שולח...'; $('msg2').textContent='';
+  var ctrl=(typeof AbortController!=='undefined')?new AbortController():null;
+  var tm=ctrl?setTimeout(function(){ ctrl.abort(); },90000):null;
+  blobToBase64(pdfBlob).then(function(b64){
+    var payload={
+      token:SEND_TOKEN, name:d.name, id:d.id, phone:d.phone, city:d.city,
+      amount:fmtAmt(d.amount), date:fmtDate(d.date), method:d.methodText,
+      to:(d.to==='onezero')?'ONE ZERO 18/001/231566835':'בנק לאומי', bank:d.bank,
+      repay:(d.repay==='date')?('עד '+fmtDate(d.repayDate)):'ללא מועד קבוע',
+      sigDate:fmtDate(d.sigDate), stamp:lastStamp, copyTo:d.email,
+      filename:pdfName, pdf:b64
+    };
+    return fetch(SEND_URL,{
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body:JSON.stringify(payload),
+      signal:ctrl?ctrl.signal:undefined
+    });
+  }).then(function(r){ return r.json(); }).then(function(j){
+    if(!j||!j.ok) throw new Error((j&&j.error)||'send failed');
+    $('sendbox').style.display='none'; $('fallback').style.display='none'; $('donebox').style.display='block';
+  }).catch(function(e){
+    btn.disabled=false; btn.textContent='שלח לנועם במייל';
+    $('msg2').textContent='השליחה במייל לא הצליחה. נסו שוב, או שלחו בוואטסאפ עם הכפתורים למטה.';
+    $('fallback').style.display='block';
+  }).then(function(){ if(tm) clearTimeout(tm); });
+});
+$('share').addEventListener('click',function(){
+  if(!pdfBlob) return;
+  var file=null;
+  try{ file=new File([pdfBlob],pdfName,{type:'application/pdf'}); }catch(e){}
+  if(file&&navigator.canShare&&navigator.canShare({files:[file]})){
+    navigator.share({files:[file],title:'הצהרת הלוואה'}).catch(function(e){
+      if(e&&e.name==='AbortError') return;
+      download(); $('msg2').textContent='השיתוף לא הצליח – הקובץ הורד. שלחו אותו לנועם בוואטסאפ.';
+    });
+  }else{
+    download(); $('msg2').textContent='הדפדפן לא תומך בשיתוף ישיר – הקובץ הורד. שלחו אותו לנועם בוואטסאפ.';
+  }
+});
+})();
+</script>
+</body>
+</html>
