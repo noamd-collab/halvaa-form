@@ -49,16 +49,6 @@ function doPost(e) {
       name: 'טופס הצהרת הלוואה'
     });
 
-    if (d.copyTo && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.copyTo)) {
-      MailApp.sendEmail({
-        to: d.copyTo,
-        subject: 'עותק: הצהרת הלוואה - נועם דורון',
-        body: 'מצורף עותק של ההצהרה שחתמת. תודה רבה!\n\nנועם דורון, 050-7746289',
-        attachments: [blob],
-        name: 'נועם דורון'
-      });
-    }
-
     return out({ ok: true });
   } catch (err) {
     return out({ ok: false, error: String(err) });

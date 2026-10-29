@@ -106,7 +106,7 @@
     <div><label for="fphone">טלפון</label><input id="fphone" type="tel" autocomplete="tel" required></div>
     <div><label for="fcity">יישוב <span class="hint">(לא חובה)</span></label><input id="fcity" type="text" autocomplete="address-level2"></div>
   </div>
-  <label for="fmail">המייל שלך <span class="hint">(לא חובה – תקבלו עותק של ההצהרה החתומה)</span></label>
+  <label for="fmail">המייל שלך <span class="hint">(לא חובה – כדי שנועם יוכל לשלוח לך עותק)</span></label>
   <input id="fmail" type="email" autocomplete="email" inputmode="email" dir="ltr" style="text-align:left">
 </section>
 
@@ -165,7 +165,7 @@
 </section>
 
 <section class="facts" style="margin-top:0">
-  <b>פרטי הלווה:</b> נועם דורון, ת.ז. 304979909, טלפון 050-7746289<br>
+  <b>פרטי הלווה:</b> נועם דורון, טלפון 050-7746289<br>
   <b>חשבון:</b> נועם דורון, ONE ZERO, בנק 18, סניף 001, חשבון 231566835
 </section>
 
@@ -180,7 +180,7 @@
   <img id="pimg" alt="תצוגה מקדימה של ההצהרה החתומה">
   <div id="sendbox">
     <div class="btns"><button type="button" class="btn" id="send">שלח לנועם במייל</button></div>
-    <p class="hint">המסמך נשלח ישירות לנועם. אם מילאתם מייל למעלה – גם אתם תקבלו עותק.</p>
+    <p class="hint">המסמך נשלח ישירות לנועם. אחרי השליחה אפשר לשמור עותק לעצמכם.</p>
   </div>
   <div id="donebox" style="display:none">
     <p class="done">נשלח לנועם. תודה רבה! 🙏</p>
@@ -242,30 +242,15 @@ function renderDoc(d, sigImg, createCanvas, stamp){
   var rule=function(yy,color){ x.strokeStyle=color||'#d6dbd8'; x.lineWidth=2; x.beginPath(); x.moveTo(M,yy); x.lineTo(R,yy); x.stroke(); };
   var head=function(s){ y+=22; font(30,'bold'); x.fillStyle='#1f6f5f'; x.textAlign='right'; x.fillText(rtl(s),R,y); y+=14; rule(y); y+=48; };
   var kv=function(k,v){
-    font(30,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right'; x.fillText(rtl(k),R,y);
-    var wk=x.measureText(k).width;
-    font(30,'normal'); x.fillText(rtl(v),R-wk-14,y); y+=LH;
-  };
-
-  /* title */
-  y+=48;
-  font(46,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right';
-  x.fillText(rtl('הצהרת מלווה – הלוואה ללא ריבית'),R,y); y+=46;
-  font(26,'normal'); x.fillStyle='#5b6b68';
-  x.fillText(rtl('לבקשת בנק ONE ZERO. הלווה: נועם דורון, ת.ז. 304979909'),R,y); y+=28;
-  rule(y,'#1f6f5f');
-
-  /* lender */
-  head('פרטי המלווה');
-  kv('שם מלא:',d.name);
-  kv('תעודת זהות:',d.id);
+    font(30,'bold'); x.fillStyle='#1c2b2a'; x.tex
+[… 43245 of 44309 bytes shown, 1064 removed between the two halves: the response exceeded the 48000-byte inline limit (INLINE_LIMIT_BYTES); the excerpt is not parseable JSON. Full output saved to: grounding/responses/InvokeConnectorOperation_c486446f5c5b.json The full output is valid JSON with a very long line, so grep/view are ineffective on it — use bash to query the saved file (e.g. python3 with the json module).]
   kv('טלפון:',ltr(d.phone));
   if(d.city) kv('יישוב:',d.city);
 
   /* loan */
   head('ההלוואה');
   var amt=fmtAmt(d.amount)+NB+'₪';
-  para('אני מצהיר/ה כי הלוויתי לנועם דורון, ת.ז.'+NB+'304979909 (להלן: הלווה), סך של '+amt+'.',30);
+  para('אני מצהיר/ה כי הלוויתי לנועם דורון (להלן: הלווה), סך של '+amt+'.',30);
   var how;
   if(d.method==='cash'){
     how='הכסף נמסר ללווה במזומן ביום'+NB+fmtDate(d.date)+'.';
@@ -313,7 +298,7 @@ function renderDoc(d, sigImg, createCanvas, stamp){
   fy+=44;
   font(24,'bold'); x.fillStyle='#1c2b2a'; x.textAlign='right'; x.fillText(rtl('פרטי הלווה:'),R,fy);
   var wf=x.measureText('פרטי הלווה:').width;
-  font(24,'normal'); x.fillText(rtl('נועם דורון, ת.ז. 304979909, טלפון 050-7746289'),R-wf-12,fy);
+  font(24,'normal'); x.fillText(rtl('נועם דורון, טלפון 050-7746289'),R-wf-12,fy);
   fy+=36;
   font(24,'bold'); x.fillText(rtl('חשבון:'),R,fy);
   wf=x.measureText('חשבון:').width;
